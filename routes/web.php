@@ -2,6 +2,5 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::view('/playground', 'playground')->name('playground');
+Route::get('/', fn() => redirect()->route('playground'));
